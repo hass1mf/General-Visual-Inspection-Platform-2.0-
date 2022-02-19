@@ -1,0 +1,46 @@
+﻿<hin:ModuleFormBase
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hin="clr-namespace:Heart.Inward;assembly=Heart"
+             xmlns:hout="clr-namespace:Heart.Outward;assembly=Heart"
+             xmlns:local="clr-namespace:Plugin.ReceiveTxt"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Plugin.ReceiveTxt.ModuleForm"
+             mc:Ignorable="d"
+             Title="接收文本" Height="300" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="通讯设置:" VerticalAlignment="Center" Margin="50,0,0,0" FontSize="14"/>
+            <ComboBox x:Name="_CommunicationSetting" Width="150" Height="30" SelectionChanged="_CommunicationSetting_SelectionChanged" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBlock Text="通讯备注:" VerticalAlignment="Center" Margin="50,0,0,0" FontSize="14" />
+            <TextBox x:Name="_CommunicationRemark" Width="150" Height="30" IsReadOnly="True"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <TextBlock Text="结束符:" FontSize="14" VerticalAlignment="Center" Margin="61.8,0,0,0"/>
+            <ComboBox x:Name="_CommunicationEndSymbol" Width="150" Height="30"  SelectionChanged="_CommunicationEndSymbol_SelectionChanged">
+                <ComboBoxItem Content="无"/>
+                <ComboBoxItem Content="\r"/>
+                <ComboBoxItem Content="\n"/>
+                <ComboBoxItem Content="\r\n"/>
+            </ComboBox>
+        </Grid>
+        <Grid Grid.Row="3">
+            <CheckBox x:Name="_IsOpenTimeOut" Content="启用超时" Width="100" FontSize="14" VerticalAlignment="Center" Margin="0,0,200,0" IsChecked="False" Checked="_IsOpenTimeOut_Checked" Unchecked="_IsOpenTimeOut_Unchecked"/>
+            <xctk:IntegerUpDown x:Name="_timeout" Height="30" Width="100" Margin="50,0,0,0" VerticalAlignment="Center" Text="2000" Minimum="500" />
+            <Label Name="_Label_ms" Content="毫秒" VerticalAlignment="Center" Margin="270,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="4">
+            <hin:ModuleFormBaseControlTwo x:Name="_baseControl" />
+        </Grid>
+    </Grid>
+</hin:ModuleFormBase>

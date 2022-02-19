@@ -1,0 +1,201 @@
+﻿<hin:ModuleFormBase
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hin="clr-namespace:Heart.Inward;assembly=Heart"
+             xmlns:hout="clr-namespace:Heart.Outward;assembly=Heart"
+             xmlns:local="clr-namespace:Plugin.TemplateMatching"
+             xmlns:HalconDotNet="clr-namespace:HalconDotNet;assembly=halcondotnet"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             x:Class="Plugin.TemplateMatching.ModuleForm"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0">
+            <Grid.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="TextAlignment" Value="Right"/>
+                    <Setter Property="Padding" Value="0,0,10,0"/>
+                    <Setter Property="Width" Value="60"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TabControl mah:TabControlHelper.Underlined="TabPanel" Grid.Column="0" Grid.Row="0">
+                <TabItem Header="基本参数">
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <GroupBox Header="图像设置" Grid.Row="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="110"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="输入图像" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                                <TextBox x:Name="_inputImage" Grid.Column="1" Margin="0,0,0,1"/>
+                                <Button x:Name="_LinkImage" Height="20" Width="20" Grid.Column="2" BorderThickness="0" Click="_GetImage_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="link.png"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button x:Name="_DeleteImage" Height="20" Width="20" Grid.Column="3" BorderThickness="0" Click="_DeleteImage_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="fork.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="匹配模式" Grid.Row="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <RadioButton Content="形状轮廓匹配" Name="_ShapeContourMatching" VerticalAlignment="Center" Grid.Column="0" IsChecked="True"/>
+                                <RadioButton Content="灰度匹配" Name="_GrayscaleMatching" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="搜索区域信息" Grid.Row="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <RadioButton Content="手动输入" VerticalAlignment="Center" Name="_ManualInput" Grid.Row="0" IsChecked="True" Margin="10,0,140,0" Click="_ManualInput_Click"/>
+                                <RadioButton Content="链接区域" Name="_LinkRegion" VerticalAlignment="Center" Grid.Row="0" Margin="80,0,70,0" Click="_LinkRegion_Click" />
+                                <Button x:Name="EditSearchArea" Content="编辑" Padding="1,1,1,1" Width="65" Click="_EditSearchArea_Click" RenderTransformOrigin="1.381,0.924" Margin="161,3,2,1"/>
+                                <Grid Grid.Row="1" Name="_Manual" >
+                                    <TextBlock Text="左上X:"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,85"/>
+                                    <TextBox Text="0" Height="25" Name="_leftAndUpX" Width="100" VerticalAlignment="Top" Margin="60,5,70,80" />
+                                    <Button Name="_leftAndUpXLink" Width="20" Height="20" Grid.Row="1" Margin="120,5,0,80" VerticalAlignment="Top" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="link.png"/>
+                                        </Button.Background>
+                                    </Button>
+                                    <Button Name="_leftAndUpXDelete" Width="20" Height="20" Grid.Row="1" Margin="180,5,0,80" VerticalAlignment="Top" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="fork.png"/>
+                                        </Button.Background>
+                                    </Button>
+
+                                    <TextBlock Text="左上Y:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,35,0,60"/>
+                                    <TextBox Text="0" Height="25" Name="_leftAndUpY" Width="100" VerticalAlignment="Top" Margin="60,30,70,55" />
+                                    <Button Name="_leftAndUpYLink" Width="20" Height="20" Grid.Row="1" VerticalAlignment="Top" Margin="120,30,0,55" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="link.png"/>
+                                        </Button.Background>
+                                    </Button>
+                                    <Button Name="_leftAndUpYDelete" Width="20" Height="20" Grid.Row="1" VerticalAlignment="Top" Margin="180,30,0,55" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="fork.png"/>
+                                        </Button.Background>
+                                    </Button>
+
+                                    <TextBlock Text="右下X:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,60,0,35"/>
+                                    <TextBox Text="0" Height="25" Name="_rightAndDownX" Width="100" VerticalAlignment="Top" Margin="60,55,70,30"/>
+                                    <Button Name="_rightAndDownXLink" Width="20" Height="20" Grid.Row="1" VerticalAlignment="Top" Margin="120,55,0,30" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="link.png"/>
+                                        </Button.Background>
+                                    </Button>
+                                    <Button Name="_rightAndDownXDelete" Width="20" Height="20" Grid.Row="1" VerticalAlignment="Top" Margin="180,55,0,30" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="fork.png"/>
+                                        </Button.Background>
+                                    </Button>
+
+                                    <TextBlock Text="右下Y:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,85,0,10"/>
+                                    <TextBox Text="0" Height="25" Name="_rightAndDownY" Width="100" VerticalAlignment="Top" Margin="60,80,70,5" />
+                                    <Button Name="_rightAndDownYLink" Width="20" Height="20" Grid.Row="1" VerticalAlignment="Top" Margin="120,80,0,5" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="link.png"/>
+                                        </Button.Background>
+                                    </Button>
+                                    <Button Name="_rightAndDownYDelete" Width="20" Height="20" Grid.Row="1" VerticalAlignment="Top" Margin="180,80,0,5" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="fork.png"/>
+                                        </Button.Background>
+                                    </Button>
+
+                                </Grid>
+                                <Grid Grid.Row="1" Name="_Link">
+                                    <TextBox Name="_LinkRegionText" Width="140" Height="20"  VerticalAlignment="Top" Margin="5,10,85,80" />
+                                    <Button Name="_LinkRegionButton" Width="20" Height="20" Margin="160,10,45,80" VerticalAlignment="Top" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="link.png"/>
+                                        </Button.Background>
+                                    </Button>
+                                    <Button Name="_DeleteRegion" Width="20" Height="20" VerticalAlignment="Top" Margin="180,10,15,80" BorderThickness="0">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="fork.png"/>
+                                        </Button.Background>
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="参数设置">
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="190"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <GroupBox Header="模版设置" Grid.Row="0">
+                            <Grid>
+                                <hout:HWindowFitExt HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="151"/>
+                                <Button x:Name="TemplateLearning" Content="学习" Padding="1,1,1,1" Width="70" Click="_TemplateLearning_Click" RenderTransformOrigin="1.381,0.924" Margin="155,17,2,83"/>
+                                <Button x:Name="EditTemplateArea" Content="编辑" Padding="1,1,1,1" Width="70" Click="_EditTemplateArea_Click" RenderTransformOrigin="1.381,0.924" Margin="155,67,2,33"/>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="模版查找参数" Grid.Row="1">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="匹配分数(0-1)" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" />
+                                <xctk:DoubleUpDown x:Name="_matchScore" Grid.Row="0" Width="130" Height="20" Margin="50,0,0,0" Maximum="1" Minimum="0.01" Text="0.3"/>
+
+                                <TextBlock Text="匹配个数" HorizontalAlignment="Left" Grid.Row="1"  Margin="10,0,0,0"/>
+                                <xctk:IntegerUpDown x:Name="_matchCounts" Grid.Row="1" Width="130" Height="20" Margin="50,0,0,0" Minimum="1" Text="1"/>
+
+                                <TextBlock Text="贪婪度" HorizontalAlignment="Left" Grid.Row="2"  Margin="10,0,0,0"/>
+                                <xctk:DoubleUpDown x:Name="_Greed" Grid.Row="2" Width="130" Height="20" Margin="50,0,0,0" Maximum="1" Minimum="0.01" Text="0.9"/>
+
+                                <TextBlock Text="最大重叠" HorizontalAlignment="Left" Grid.Row="3"  Margin="10,0,0,0"/>
+                                <xctk:DoubleUpDown x:Name="_Maxoverlapping" Grid.Row="3" Width="130" Height="20" Margin="50,0,0,0" Maximum="1" Minimum="0.01" Text="0.5"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="数据结果">
+
+                </TabItem>
+            </TabControl>
+            <hout:HWindowFitExt x:Name="_hWinDisplay" Grid.Column="1"/>
+
+        </Grid>
+        <hin:ModuleFormBaseControl x:Name="_baseControl" Grid.Row="1" RunBtnVisibility="Visible"  />
+    </Grid>
+</hin:ModuleFormBase>

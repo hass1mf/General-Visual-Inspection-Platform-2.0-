@@ -1,0 +1,12 @@
+F:\FrameWork\AqOs-release\Plugin.ImageGraytesting.dll
+F:\FrameWork\AqOs-release\Plugin.ImageGraytesting.pdb
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\Plugin.ImageGraytesting.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\recourse.baml
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\ModuleForm.g.cs
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\recourse.g.cs
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\Plugin.ImageGraytesting_MarkupCompile.cache
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\Plugin.ImageGraytesting_MarkupCompile.lref
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\ModuleForm.baml
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\Plugin.ImageGraytesting.g.resources
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\Plugin.ImageGraytesting.dll
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.ImageGraytesting\obj\Release\Plugin.ImageGraytesting.pdb

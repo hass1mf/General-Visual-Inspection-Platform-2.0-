@@ -1,0 +1,13 @@
+F:\FrameWork\AqOs-release\Plugin.ImageAcquire.dll
+F:\FrameWork\AqOs-release\Plugin.ImageAcquire.pdb
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\Plugin.ImageAcquire.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\recourse.baml
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\ModuleForm.g.cs
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\recourse.g.cs
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\Plugin.ImageAcquire_MarkupCompile.cache
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\Plugin.ImageAcquire_MarkupCompile.lref
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\ModuleForm.baml
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\Plugin.ImageAcquire.g.resources
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\Plugin.ImageAcquire.csproj.CopyComplete
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\Plugin.ImageAcquire.dll
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageAcquire\obj\Release\Plugin.ImageAcquire.pdb

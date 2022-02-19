@@ -1,0 +1,188 @@
+﻿<Window x:Class="MyOS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyOS"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        xmlns:c="clr-namespace:Heart.Outward;assembly=Heart"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="AqOS v0.0.0.0.1" Height="720" Width="1280" Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+
+    <DockPanel Margin="0,0,0,0">
+        <Menu DockPanel.Dock="Top" Margin="0,0,0,0">
+            <MenuItem Header="文件" Height="30">
+                <MenuItem Header="新建" Name="_NewProject" Click="_NewProject_Click"/>
+                <MenuItem Header="打开..." Name="_OpenProject" Click="_OpenProject_Click"/>
+                <MenuItem Header="保存" Name="_SaveProjrct" Click="_SaveProject_Click"/>
+                <MenuItem Header="另存为" Name="_Saveas" Click="_Saveas_Click"/>
+            </MenuItem>
+            <MenuItem Header="视图" Height="30">
+                <MenuItem Header="恢复默认视图" Name="_RestoreDefault_view"/>
+            </MenuItem>
+            <MenuItem Header="设置" Height="30"> 
+                <MenuItem Header="图像窗口设置" Name="MenuSettingImageDisplay" Click="MenuSettingImageDisplay_Click"/>
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top" Height="50" Margin="0,0,0,0">
+            <Button Padding="4,4,4,4">
+                <Image Source="Icon\solution_manage.png"/>
+            </Button>
+            <Button Padding="4,4,4,4">
+                <Image Source="Icon\solution_new.png" />
+            </Button>
+            <Button Padding="4,4,4,4">
+                <Image Source="Icon\solution_open.png" />
+            </Button>
+            <Button Padding="4,4,4,4">
+                <Image Source="Icon\solution_save.png" />
+            </Button>
+            <Separator/>
+            <Button Padding="4,4,4,4" Name="_buttonCamera" Click="_buttonCamera_Click">
+                <Image Source="Icon\camera.png" />
+            </Button>
+            <Button Padding="4,4,4,4" Name="_buttonCommunication" Click="_buttonCommunication_Click">
+                <Image Source="Icon\communication.png" />
+            </Button>
+            <Button Name="_buttonVariable" Padding="4,4,4,4" Click="_buttonVariable_Click">
+                <Image Source="Icon\variable.png" />
+            </Button>
+            <Separator/>
+            <Button x:Name="AllProjectOnceStartRun" Padding="4,4,4,4" Click="All_ProjectOnceStartRun_Click">
+                <Image Source="Icon\project_execute_once.png" />
+            </Button>
+            <Button x:Name="AllProjectStartRun" Padding="4,4,4,4" Click="All_ProjectStartRun_Click">
+                <Image Source="Icon\solution_loop.png" />
+            </Button>
+            <Button x:Name="AllProjectStopRun" Padding="4,4,4,4" Click="All_ProjectStopRun_Click">
+                <Image Source="Icon\solution_pause.png" />
+            </Button>
+            <Separator/>
+            <Button Padding="4,4,4,4">
+                <Image Source="Icon\user.png" />
+            </Button>
+            <Button Padding="4,4,4,4">
+                <Image Source="Icon\information.png" />
+            </Button>
+        </ToolBar>
+        <StatusBar DockPanel.Dock="Bottom">
+            <TextBlock x:Name="m_StatusBar" Text="解决方案未保存"></TextBlock>
+        </StatusBar>
+        <xcad:DockingManager x:Name="_dockingManager"    
+                        AllowMixedOrientation="True"
+                        BorderBrush="Black"
+                        BorderThickness="1">
+            <xcad:DockingManager.Theme>
+                <xcad:MetroTheme/>
+            </xcad:DockingManager.Theme>
+            <xcad:LayoutRoot  x:Name="_layoutRoot">
+                <xcad:LayoutPanel Orientation="Horizontal">
+                    <xcad:LayoutAnchorablePane DockWidth="1*">
+                        <xcad:LayoutAnchorable ContentId="tools"
+                                    Title="工具栏"
+                                    CanClose="True">
+                            <c:ToolBoxExt Name="_toolBoxExt"/>
+                        </xcad:LayoutAnchorable>
+                    </xcad:LayoutAnchorablePane>
+                    <xcad:LayoutAnchorablePane DockWidth="1.2*">
+                            <xcad:LayoutAnchorable ContentId="procedure"
+                                    Title="流程栏"
+                                    CanClose="True">
+                            <DockPanel Margin="0,0,0,0">
+                                <ToolBar DockPanel.Dock="Top" Height="40" Margin="0,0,0,0">
+                                    <Button x:Name="ProjectNew"  Padding="4,4,4,4" Click="ProjectNew_Click">
+                                        <Image Source="Icon/project_new.png"/>
+                                    </Button>
+                                    <Button x:Name="ProjectDelete"  Padding="4,4,4,4" Click="ProjectDelete_Click">
+                                        <Image Source="Icon/project_delete.png"/>
+                                    </Button>
+                                    <Button x:Name="ProjectSetting"  Padding="4,4,4,4" Click="ProjectSetting_Click">
+                                        <Image Source="Icon/project_setting.png" />
+                                    </Button>
+                                    <Button x:Name="ProjectExecuteOnce"  Padding="4,4,4,4" Click="ProjectExecuteOnce_Click">
+                                        <Image Source="Icon/project_execute_once.png"/>
+                                    </Button>
+                                    <Button x:Name="ProjectStartRun"  Padding="4,4,4,4" Click="ProjectStartRun_Click">
+                                        <Image Source="Icon/project_start_run.png"/>
+                                    </Button>
+                                    <Button x:Name="ProjectStopRun" Padding="4,4,4,4" Click="ProjectStopRun_Click">
+                                        <Image Source="Icon/project_stop_run.png"/>
+                                    </Button>
+                                </ToolBar>
+                                <TabControl DockPanel.Dock="Top" Name="_tabControl" HorizontalAlignment="Stretch"  Margin="0,0,0,0" VerticalAlignment="Stretch" >
+                                </TabControl>
+                                
+                            </DockPanel>
+                        </xcad:LayoutAnchorable>
+                        </xcad:LayoutAnchorablePane>
+                    <xcad:LayoutPanel DockWidth="3*" Orientation="Vertical">
+                        <xcad:LayoutAnchorablePane  DockHeight="3*" >
+                            <xcad:LayoutAnchorable ContentId="dispaly"
+                                    Title="显示栏"
+                                    CanClose="True">
+                                <c:SplitHWindowFitExt x:Name="_splitHWindowFitExt" />
+                            </xcad:LayoutAnchorable>
+                    </xcad:LayoutAnchorablePane>
+                        <xcad:LayoutPanel DockHeight="1*" Orientation="Horizontal">
+                            <xcad:LayoutAnchorablePane  DockWidth="3*" >
+                                <xcad:LayoutAnchorable ContentId="output"
+                                Title="输出栏"
+                                CanClose="True">
+                                    <Grid Name ="_outputGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Name = "_outputLabel" Grid.Column="0"  FontSize="14" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                                        <ListView x:Name="_outputListView" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding}" >
+                                            <ListView.Resources>
+                                                <Style x:Key="HideTheHeader"  TargetType="GridViewColumnHeader">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </Style>
+                                            </ListView.Resources>
+                                            <ListView.View>
+                                                <GridView ColumnHeaderContainerStyle="{StaticResource HideTheHeader}">
+                                                    <GridViewColumn Header="  类型  " Width="Auto" DisplayMemberBinding="{Binding vType}"/>
+                                                    <GridViewColumn Header="  名称  " Width="Auto" DisplayMemberBinding="{Binding vName}"/>
+                                                    <GridViewColumn Header="   值   " Width="Auto" DisplayMemberBinding="{Binding vValue}"/>
+                                                    <GridViewColumn Header="     备注     " Width="Auto" DisplayMemberBinding="{Binding vRemark}"/>
+                                                </GridView>
+                                            </ListView.View>
+                                        </ListView>
+                                    </Grid>
+                                </xcad:LayoutAnchorable>
+                                <xcad:LayoutAnchorable ContentId="log"
+                                Title="日志栏"
+                                CanClose="True">
+                                    <ListBox>
+                                        <s:String>Alarm 1</s:String>
+                                        <s:String>Alarm 2</s:String>
+                                        <s:String>Alarm 3</s:String>
+                                    </ListBox>
+                                </xcad:LayoutAnchorable>
+                                <xcad:LayoutAnchorable ContentId="data"
+                                Title="数据栏"
+                                CanClose="True">
+                                    <ListBox>
+                                        <s:String>Alarm 1</s:String>
+                                        <s:String>Alarm 2</s:String>
+                                        <s:String>Alarm 3</s:String>
+                                    </ListBox>
+                                </xcad:LayoutAnchorable>
+                             
+                            </xcad:LayoutAnchorablePane>
+                            <xcad:LayoutAnchorablePane  DockWidth="1*" >
+                              
+                            </xcad:LayoutAnchorablePane>
+                        </xcad:LayoutPanel>
+                    </xcad:LayoutPanel>
+                </xcad:LayoutPanel>
+            </xcad:LayoutRoot>
+        </xcad:DockingManager>
+    </DockPanel>
+
+    
+</Window>

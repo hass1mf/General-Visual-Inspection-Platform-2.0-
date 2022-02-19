@@ -1,0 +1,110 @@
+﻿<hin:ModuleFormBase
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:hin="clr-namespace:Heart.Inward;assembly=Heart"
+             xmlns:hout="clr-namespace:Heart.Outward;assembly=Heart"
+             xmlns:local="clr-namespace:Plugin.AnomalyDetection"
+             xmlns:HalconDotNet="clr-namespace:HalconDotNet;assembly=halcondotnet"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             x:Class="Plugin.AnomalyDetection.ModuleForm"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             Background="{DynamicResource MaterialDesignPaper}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0">
+            <Grid.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="TextAlignment" Value="Right"/>
+                    <Setter Property="Padding" Value="0,0,10,0"/>
+                    <Setter Property="Width" Value="60"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TabControl mah:TabControlHelper.Underlined="TabPanel" Grid.Column="0" Grid.Row="0">
+                <TabItem Header="基本参数">
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <GroupBox Header="图像设置" Grid.Row="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="110"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="输入图像" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+                                <TextBox x:Name="_inputImage" Grid.Column="1" Margin="0,0,0,1"/>
+                                <Button x:Name="_LinkImage" Height="20" Width="20" Grid.Column="2" BorderThickness="0" Click="_GetImage_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="link.png"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button x:Name="_DeleteImage" Height="20" Width="20" Grid.Column="3" BorderThickness="0" Click="_DeleteImage_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="fork.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="模型路径" Grid.Row="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="130"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="模型文件:"  VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" />
+                                <TextBox Name="_modelPath"  VerticalAlignment="Top" Grid.Row="0"  Grid.Column="1" />
+                                <Button Name="_pathBrowser" VerticalAlignment="Top" Grid.Row="0" Grid.Column="2" Click="_pathBrowser_Click" Margin="9.8,-2,-3.6,-0.4" >
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Grid>
+                                                <Image Margin="0,0,0,0" Source="file.png"/>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="检测参数" Grid.Row="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Label Content="licence:"  VerticalAlignment="Center" Name="_licence" Grid.Row="0" Margin="0,0,80,0" />
+                                <TextBox  VerticalAlignment="Center" Name="_LicenceInput" Grid.Row="0" Margin="60,0,80,0" />
+                                <Button x:Name="EditLicence" Content="修改" Padding="1,1,1,1" Width="65" Click="_EditLicence_Click" RenderTransformOrigin="1.381,0.924" Margin="161,3,2,1"/>
+
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="显示设置">
+
+                </TabItem>
+            </TabControl>
+            <hout:HWindowFitExt x:Name="_hWinDisplay" Grid.Column="1"/>
+
+        </Grid>
+        <hin:ModuleFormBaseControl x:Name="_baseControl" Grid.Row="1" RunBtnVisibility="Visible" />
+    </Grid>
+</hin:ModuleFormBase>

@@ -1,0 +1,12 @@
+F:\FrameWork\AqOs-release\Plugin.ImageScript.dll
+F:\FrameWork\AqOs-release\Plugin.ImageScript.pdb
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\Plugin.ImageScript.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\recourse.baml
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\ModuleForm.g.cs
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\recourse.g.cs
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\Plugin.ImageScript_MarkupCompile.cache
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\Plugin.ImageScript_MarkupCompile.lref
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\ModuleForm.baml
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\Plugin.ImageScript.g.resources
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\Plugin.ImageScript.dll
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageScript\obj\Release\Plugin.ImageScript.pdb

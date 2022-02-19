@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4841B039-BF61-40E3-9F0C-1E0679F8B741}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Heart</RootNamespace>
+    <AssemblyName>Heart</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Win64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\AqOs-release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AcqDevice, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Win64\AcqDevice.dll</HintPath>
+    </Reference>
+    <Reference Include="halcondotnet, Version=19.11.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03Library\Halcon\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="hdevenginedotnet, Version=19.11.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03Library\Halcon\hdevenginedotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03Library\MaterialDesign\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.2.0.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\03Library\MaterialDesign\MaterialDesignThemes.3.2.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Communacation\EComInfo.cs" />
+    <Compile Include="Communacation\EComManageer.cs" />
+    <Compile Include="Communacation\ECommunacation.cs" />
+    <Compile Include="Communacation\SerialPort\MySerialPort.cs" />
+    <Compile Include="Communacation\Socket\Command.cs" />
+    <Compile Include="Communacation\Socket\DMTcpClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Communacation\Socket\DMTcpServer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Communacation\Socket\DMUdpClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Communacation\Socket\IDataCell.cs" />
+    <Compile Include="Communacation\Socket\MsgCell.cs" />
+    <Compile Include="Communacation\Socket\MsgType.cs" />
+    <Compile Include="Communacation\Socket\MsgTypeCell.cs" />
+    <Compile Include="Communacation\Socket\ReceiveDataEventArgs.cs" />
+    <Compile Include="Communacation\Socket\ReceiveDataEventHandler.cs" />
+    <Compile Include="Communacation\Socket\ResponeTraFransfersFile.cs" />
+    <Compile Include="Communacation\Socket\SerHelper.cs" />
+    <Compile Include="Communacation\Socket\SocketError.cs" />
+    <Compile Include="Communacation\Socket\SocketState.cs" />
+    <Compile Include="Communacation\Socket\UdpLibrary.cs" />
+    <Compile Include="Communacation\Tool\HexTool.cs" />
+    <Compile Include="Inward\FileHelper.cs" />
+    <Compile Include="Inward\ModuleFormBaseControlTwo.xaml.cs">
+      <DependentUpon>ModuleFormBaseControlTwo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inward\Variable.cs" />
+    <Compile Include="Outward\DialogComboBox.xaml.cs">
+      <DependentUpon>DialogComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Outward\EProcedure.cs" />
+    <Compile Include="Outward\ExpressionScript.cs" />
+    <Compile Include="Outward\ExpressionEdit.xaml.cs">
+      <DependentUpon>ExpressionEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Outward\FocusTool.cs" />
+    <Compile Include="Outward\HImageExt.cs" />
+    <Compile Include="Outward\HWindowFitExt.xaml.cs">
+      <DependentUpon>HWindowFitExt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Outward\ImageTool.cs" />
+    <Compile Include="Outward\MeasureROI.cs" />
+    <Compile Include="Outward\ModuleTreeExt.xaml.cs">
+      <DependentUpon>ModuleTreeExt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Outward\ModuleTreeExtSave.cs" />
+    <Compile Include="Outward\SplitHWindowFitExt.xaml.cs">
+      <DependentUpon>SplitHWindowFitExt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Outward\ToolBoxExt.xaml.cs">
+      <DependentUpon>ToolBoxExt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Outward\VariableTable.xaml.cs">
+      <DependentUpon>VariableTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Outward\WPFCursorTool.cs" />
+    <Compile Include="Outward\WPFElementTool.cs" />
+    <Compile Include="Inward\CloneObject.cs" />
+    <Compile Include="Inward\ModuleFormBase.cs" />
+    <Compile Include="Inward\ModuleFormBaseControl.xaml.cs">
+      <DependentUpon>ModuleFormBaseControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inward\ModuleObjBase.cs" />
+    <Compile Include="Inward\Plugin.cs" />
+    <Compile Include="Inward\Project.cs" />
+    <Compile Include="Inward\Solution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\collapse.png" />
+    <Resource Include="Icon\expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Inward\ModuleFormBaseControlTwo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Outward\DialogComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Outward\ExpressionEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Outward\HWindowFitExt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Outward\ModuleTreeExt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Outward\SplitHWindowFitExt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Outward\ToolBoxExt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Inward\ModuleFormBaseControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Outward\VariableTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\module.png" />
+    <Resource Include="Icon\NG.png" />
+    <Resource Include="Icon\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\disable.png" />
+    <Resource Include="Icon\waiting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\Win64\AcqDevice.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
+</Project>

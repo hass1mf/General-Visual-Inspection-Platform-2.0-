@@ -1,0 +1,12 @@
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Build\Release\Plugin.ImageGray.dll
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Build\Release\Plugin.ImageGray.pdb
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\Plugin.ImageGray.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\recourse.baml
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\ModuleForm.g.cs
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\recourse.g.cs
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\Plugin.ImageGray_MarkupCompile.cache
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\Plugin.ImageGray_MarkupCompile.lref
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\ModuleForm.baml
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\Plugin.ImageGray.g.resources
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\Plugin.ImageGray.dll
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageGray\obj\Release\Plugin.ImageGray.pdb

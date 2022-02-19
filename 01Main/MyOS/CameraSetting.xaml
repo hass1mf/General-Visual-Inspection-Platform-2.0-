@@ -1,0 +1,104 @@
+﻿<Window x:Class="MyOS.CameraSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:hin="clr-namespace:Heart.Inward;assembly=Heart"
+        xmlns:hout="clr-namespace:Heart.Outward;assembly=Heart"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:MyOS"
+        mc:Ignorable="d"
+        Title="相机设置" Height="600" Width="800" ResizeMode="NoResize" Loaded="Window_Loaded" Closing="Window_Closing" IsVisibleChanged="Window_IsVisibleChanged" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition  Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition  Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="MediumSeaGreen">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="设备选择" Background="MediumSeaGreen"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                    </Grid.RowDefinitions>
+                    <Canvas Grid.Row="0">
+                        <TextBlock Text="设备型号：" Margin="10,15,0,0" TextElement.FontSize="14"/>
+                        <ComboBox Name="_DeviceModel" Margin="80,5,0,0" Height="30" FontSize="14" Width="200" SelectionChanged="_DeviceModel_SelectionChanged" SelectedIndex="0">
+                            <!--<ComboBoxItem Content="USB相机"/>-->
+                        </ComboBox>
+                        <TextBlock Text="设备列表：" Margin="10,60,0,0" TextElement.FontSize="14"/>
+                        <ComboBox Name="_DeviceList" Margin="80,50,0,0" Height="30" FontSize="14" Width="200"/>
+                        <Button x:Name="_addCmeraToList" Content="添加到列表" Width="110" Margin="100,110,0,0" Click="_addCmeraToList_Click"/>
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="380"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" >
+                        <GroupBox Header="设备列表"/>
+                        <DataGrid x:Name="DeviceList" Height="170" Margin="0,-140,0,0" AutoGenerateColumns="False" SelectionChanged="DeviceList_SelectionChanged" ItemsSource="{Binding}" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="名称" x:Name="_DeviceName" IsReadOnly="True" Binding="{Binding m_DeviceID}" Width="100" />
+                                <DataGridTextColumn Header="备注" x:Name="_Remark" IsReadOnly="True" Binding="{Binding m_DevDirExt}" Width="100"/>
+                                <DataGridTextColumn Header="连接状态" x:Name="_ConnectStatus" IsReadOnly="True" Binding="{Binding m_bConnected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="100" />
+                            </DataGrid.Columns>
+                            <DataGrid.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="删除" Name="deleteItem" Click="deleteItem_Click"/>
+                                </ContextMenu>
+                            </DataGrid.ContextMenu>
+                        </DataGrid>
+
+                        <Canvas x:Name="one">
+                            <TextBlock Text="当前相机:" Margin="10,240,0,0" TextElement.FontSize="14" />
+                            <TextBox Name="_cameraName" Margin="75,236,0,0" Width="70" TextElement.FontSize="14" IsReadOnly="True" />
+                            <TextBlock Text="触发模式:" Margin="160,240,0,0" TextElement.FontSize="14" />
+                            <ComboBox Name="_TriggerMode" Width="80" SelectedIndex="0" Canvas.Left="228" Canvas.Top="235">
+                                <ComboBoxItem Content="软件触发"/>
+                                <ComboBoxItem Content="硬件触发"/>
+                            </ComboBox>
+                            <TextBlock Text="曝光时间(us):" Margin="10,290,0,0" TextElement.FontSize="14" />
+                            <xctk:IntegerUpDown x:Name="_ExposureTime" Height="25" Width="60" Margin="100,285,0,0" Minimum="1" Value="3600"/>
+                            <TextBlock Text="增益:" Margin="200,290,0,0" TextElement.FontSize="14"/>
+                            <xctk:IntegerUpDown x:Name="_Gain" Height="25" Width="60" Margin="236,285,0,0" Text="1" Minimum="1" Maximum="8"/>
+                        </Canvas>
+
+                        <Canvas>
+                            <Button x:Name="_Connect" Content="连接" Width="70" Margin="20,330,0,0" Click="_Connect_Click"/>
+                            <Button x:Name="_disConnect" Content="断开" Width="70" Margin="100,330,0,0" Click="_disConnect_Click"/>
+                            <Button x:Name="_capture" Content="采集图像" Width="100" Margin="180,330,0,0" Click="_capture_Click"/>
+                        </Canvas>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1" VerticalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <hout:HWindowFitExt x:Name="_hWinDisplay" Grid.Row="0" Margin="0,-10,-0.8,10.2" />
+                <Button x:Name="_Confirm" Content="确定" Width="70" Grid.Row="1" Margin="300,0,0,0" Click="_Confirm_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

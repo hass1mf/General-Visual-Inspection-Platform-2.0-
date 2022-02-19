@@ -1,0 +1,75 @@
+﻿<hin:ModuleFormBase x:Class="Plugin.LogicCirculation.ModuleForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:hin="clr-namespace:Heart.Inward;assembly=Heart"
+             xmlns:local="clr-namespace:Plugin.LogicCirculation"
+             mc:Ignorable="d" 
+             Height="240" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition  Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="BlueViolet"/>
+        <Grid Grid.Row="1" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Name="_judgeRadioButton" Grid.Column="0" Content="判断" FontSize="16" GroupName="Method" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="5" Checked="_judgeRadioButton_Checked"/>
+            <TextBlock  Grid.Column="1" HorizontalAlignment="Center" Text="真值表达式" VerticalAlignment="Center"/>
+            <TextBox  Name="_truthTextBox" Grid.Column="2" IsReadOnly ="True" HorizontalAlignment="Stretch"  FontFamily="Consolas" FontSize="16" VerticalAlignment="Center" MouseDoubleClick="_truthTextBox_MouseDoubleClick"/>
+            <TextBlock  Grid.Column="3" HorizontalAlignment="Center" Text="计算结果" VerticalAlignment="Center"/>
+            <TextBlock  Name="_truthResultTextBlock" Grid.Column="4" HorizontalAlignment="Center" Text="" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid Grid.Row="2" Background="BlueViolet"/>
+        <Grid Grid.Row="3"  Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <RadioButton Name="_traversalRadioButton" Grid.Column="0" Content="遍历" FontSize="16" GroupName="Method" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="5" Checked="_traversalRadioButton_Checked"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0"  Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock  Grid.Column="0" HorizontalAlignment="Center" Text="初值" VerticalAlignment="Center"/>
+                    <TextBox  Name="_initialTextBox" Grid.Column="1" IsReadOnly ="True" HorizontalAlignment="Stretch"  FontFamily="Consolas" FontSize="16" VerticalAlignment="Center" MouseDoubleClick="_initialTextBox_MouseDoubleClick"/>
+                    <TextBlock  Grid.Column="2" HorizontalAlignment="Center" Text="计算结果" VerticalAlignment="Center"/>
+                    <TextBlock  Name="_initialResultTextBlock" Grid.Column="3" HorizontalAlignment="Center" Text="" VerticalAlignment="Center"/>
+                </Grid>
+                <Grid Grid.Row="1"  Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock  Grid.Column="0" HorizontalAlignment="Center" Text="终值" VerticalAlignment="Center" />
+                    <TextBox  Name="_finalTextBox" Grid.Column="1" IsReadOnly="True"  HorizontalAlignment="Stretch"  FontFamily="Consolas" FontSize="16" VerticalAlignment="Center" MouseDoubleClick="_finalTextBox_MouseDoubleClick"/>
+                    <TextBlock  Grid.Column="2" HorizontalAlignment="Center" Text="计算结果" VerticalAlignment="Center"/>
+                    <TextBlock  Name="_finalResultTextBlock" Grid.Column="3" HorizontalAlignment="Center" Text="" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <hin:ModuleFormBaseControl x:Name="_baseControl" Grid.Row="4" RunBtnVisibility="Visible"/>
+    </Grid>
+</hin:ModuleFormBase>

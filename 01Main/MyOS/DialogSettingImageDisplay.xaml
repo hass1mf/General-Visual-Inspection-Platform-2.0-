@@ -1,0 +1,38 @@
+﻿<Window x:Class="MyOS.DialogSettingImageDisplay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyOS"
+        mc:Ignorable="d"
+        Title="图像显示设置" Height="300" Width="400" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Grid.Row="0" Grid.Column="0" Source="Icon\canvas1.png" />
+        <RadioButton Name="_radioButton1" Grid.Row="1" Content="单画布" Grid.Column="0" GroupName="Canvas" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="True"/>
+        
+        <Image Grid.Row="0" Grid.Column="1" Source="Icon\canvas2.png" />
+        <RadioButton Name="_radioButton2" Grid.Row="1" Content="双画布" Grid.Column="1" GroupName="Canvas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <Image Grid.Row="2" Grid.Column="0" Source="Icon\canvas4.png" />
+        <RadioButton Name="_radioButton4" Grid.Row="3" Content="四画布" Grid.Column="0" GroupName="Canvas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <Image Grid.Row="2" Grid.Column="1" Source="Icon\canvas6.png" />
+        <RadioButton Name="_radioButton6" Grid.Row="3" Content="六画布" Grid.Column="1" GroupName="Canvas" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Button Name="Save" Content="确定" Margin="10,5,110,5" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Click="Save_Click"/>
+        <Button Name="Cancel" Content="取消" Margin="110,5,10,5" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Click="Cancel_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+F:\FrameWork\AqOs-release\Plugin.TemplateMatching.dll
+F:\FrameWork\AqOs-release\Plugin.TemplateMatching.pdb
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\Plugin.TemplateMatching.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\recourse.baml
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\ModuleForm.g.cs
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\recourse.g.cs
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\Plugin.TemplateMatching_MarkupCompile.cache
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\Plugin.TemplateMatching_MarkupCompile.lref
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\ModuleForm.baml
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\Plugin.TemplateMatching.g.resources
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\Plugin.TemplateMatching.csproj.CopyComplete
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\Plugin.TemplateMatching.dll
+F:\FrameWork\MyOS\02Plugin\01.Plugin.Detect\Plugin.TemplateMatching\obj\Release\Plugin.TemplateMatching.pdb

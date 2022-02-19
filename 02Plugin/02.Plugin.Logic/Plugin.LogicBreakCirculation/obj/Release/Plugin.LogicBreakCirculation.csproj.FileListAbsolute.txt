@@ -1,0 +1,6 @@
+F:\FrameWork\AqOs-release\Plugin.LogicBreakCirculation.dll
+F:\FrameWork\AqOs-release\Plugin.LogicBreakCirculation.pdb
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicBreakCirculation\obj\Release\Plugin.LogicBreakCirculation.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicBreakCirculation\obj\Release\Plugin.LogicBreakCirculation.g.resources
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicBreakCirculation\obj\Release\Plugin.LogicBreakCirculation.dll
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicBreakCirculation\obj\Release\Plugin.LogicBreakCirculation.pdb

@@ -1,0 +1,13 @@
+F:\FrameWork\AqOs-release\Plugin.ReceiveTxt.dll
+F:\FrameWork\AqOs-release\Plugin.ReceiveTxt.pdb
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\Plugin.ReceiveTxt.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\recourse.baml
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\ModuleForm.g.cs
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\recourse.g.cs
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\Plugin.ReceiveTxt_MarkupCompile.cache
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\Plugin.ReceiveTxt_MarkupCompile.lref
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\ModuleForm.baml
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\Plugin.ReceiveTxt.g.resources
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\Plugin.ReceiveTxt.csproj.CopyComplete
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\Plugin.ReceiveTxt.dll
+F:\FrameWork\MyOS\02Plugin\04.Plugin.FileCommunication\Plugin.ReceiveTxt\obj\Release\Plugin.ReceiveTxt.pdb

@@ -1,0 +1,12 @@
+F:\FrameWork\AqOs-release\Plugin.ImageBinary.dll
+F:\FrameWork\AqOs-release\Plugin.ImageBinary.pdb
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\Plugin.ImageBinary.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\recourse.baml
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\ModuleForm.g.cs
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\recourse.g.cs
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\Plugin.ImageBinary_MarkupCompile.cache
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\Plugin.ImageBinary_MarkupCompile.lref
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\ModuleForm.baml
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\Plugin.ImageBinary.g.resources
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\Plugin.ImageBinary.dll
+F:\FrameWork\MyOS\02Plugin\00.Plugin.Image\Plugin.ImageBinary\obj\Release\Plugin.ImageBinary.pdb

@@ -1,0 +1,9 @@
+F:\FrameWork\AqOs-release\AcqDevice.dll
+F:\FrameWork\AqOs-release\AcqDevice.pdb
+F:\FrameWork\MyOS\01Main\AcqDevice\obj\Release\AcqDevice.csprojAssemblyReference.cache
+F:\FrameWork\MyOS\01Main\AcqDevice\obj\Release\AcqDevice.Frm_AcqBasler_Attr.resources
+F:\FrameWork\MyOS\01Main\AcqDevice\obj\Release\AcqDevice.frm_AcqHKVision_Attr.resources
+F:\FrameWork\MyOS\01Main\AcqDevice\obj\Release\AcqDevice.csproj.GenerateResource.cache
+F:\FrameWork\MyOS\01Main\AcqDevice\obj\Release\AcqDevice.csproj.CopyComplete
+F:\FrameWork\MyOS\01Main\AcqDevice\obj\Release\AcqDevice.dll
+F:\FrameWork\MyOS\01Main\AcqDevice\obj\Release\AcqDevice.pdb

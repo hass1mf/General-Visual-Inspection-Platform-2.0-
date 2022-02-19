@@ -1,0 +1,13 @@
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Build\Release\Plugin.LogicCirculation.dll
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Build\Release\Plugin.LogicCirculation.pdb
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\recourse.baml
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\ModuleForm.g.cs
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\recourse.g.cs
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\Plugin.LogicCirculation_MarkupCompile.cache
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\Plugin.LogicCirculation_MarkupCompile.lref
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\ModuleForm.baml
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\Plugin.LogicCirculation.g.resources
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\Plugin.LogicCirculation.dll
+F:\FrameWork\MyOS\02Plugin\02.Plugin.Logic\Plugin.LogicCirculation\obj\Release\Plugin.LogicCirculation.pdb
+F:\FrameWork\AqOs-release\Plugin.LogicCirculation.dll
+F:\FrameWork\AqOs-release\Plugin.LogicCirculation.pdb

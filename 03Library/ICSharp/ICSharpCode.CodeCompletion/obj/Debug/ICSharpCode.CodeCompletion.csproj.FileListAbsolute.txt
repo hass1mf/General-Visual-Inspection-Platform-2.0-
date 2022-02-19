@@ -1,0 +1,12 @@
+C:\MyOS\MyOS\Win64\ICSharpCode.CodeCompletion.dll
+C:\MyOS\MyOS\Win64\ICSharpCode.CodeCompletion.pdb
+C:\MyOS\MyOS\03Library\ICSharp\ICSharpCode.CodeCompletion\obj\Debug\ICSharpCode.CodeCompletion.csprojAssemblyReference.cache
+C:\MyOS\MyOS\03Library\ICSharp\ICSharpCode.CodeCompletion\obj\Debug\ICSharpCode.CodeCompletion.csproj.CopyComplete
+C:\MyOS\MyOS\03Library\ICSharp\ICSharpCode.CodeCompletion\obj\Debug\ICSharpCode.CodeCompletion.dll
+C:\MyOS\MyOS\03Library\ICSharp\ICSharpCode.CodeCompletion\obj\Debug\ICSharpCode.CodeCompletion.pdb
+G:\MyOS\MyOS\Win64\ICSharpCode.CodeCompletion.dll
+G:\MyOS\MyOS\Win64\ICSharpCode.CodeCompletion.pdb
+G:\MyOS\MyOS\03Library\ICSharp\ICSharpCode.CodeCompletion\obj\Debug\ICSharpCode.CodeCompletion.csprojAssemblyReference.cache
+G:\MyOS\MyOS\03Library\ICSharp\ICSharpCode.CodeCompletion\obj\Debug\ICSharpCode.CodeCompletion.csproj.CopyComplete
+G:\MyOS\MyOS\03Library\ICSharp\ICSharpCode.CodeCompletion\obj\Debug\ICSharpCode.CodeCompletion.dll
+G:\MyOS\MyOS\03Library\ICSharp\ICSharpCode.CodeCompletion\obj\Debug\ICSharpCode.CodeCompletion.pdb
