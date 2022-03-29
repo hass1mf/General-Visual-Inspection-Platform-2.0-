@@ -31,6 +31,8 @@ MyOS是一款通用型的视觉检测平台, 通过拖拽工具链来完成自�
 ## Condition Embranchment Tools
 ![Page Design](https://github.com/hass1mf/General-Visual-Inspection-Platform-2.0-/blob/main/image/10.png)
 
+## Complete Project
+![Page Design](https://github.com/hass1mf/General-Visual-Inspection-Platform-2.0-/blob/main/image/11.jpg)
 
 
 
