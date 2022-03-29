@@ -33,6 +33,12 @@ MyOS是一款通用型的视觉检测平台, 通过拖拽工具链来完成自�
 
 ## Complete Project
 ![Page Design](https://github.com/hass1mf/General-Visual-Inspection-Platform-2.0-/blob/main/image/11.jpg)
+![Page Design](https://github.com/hass1mf/General-Visual-Inspection-Platform-2.0-/blob/main/image/2.jpg)
+
+
+## 在基础上可以自己去完善软件框架，可以在做项目过程中去积累的工具，不断提升自己的编程能力和软件思维，花点时间去消化整个软件框架
+![Page Design](https://github.com/hass1mf/General-Visual-Inspection-Platform-2.0-/blob/main/image/12.png)
+
 
 
 
