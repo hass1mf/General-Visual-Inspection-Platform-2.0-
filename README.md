@@ -5,3 +5,10 @@ MyOS是一款通用型的视觉检测平台, 通过拖拽工具链来完成自�
 ![Page Design](https://github.com/hass1mf/General-Visual-Inspection-Platform-2.0-/blob/main/image/1.png)
 
 ## Add Item To Page
+![Page Design](https://github.com/hass1mf/General-Visual-Inspection-Platform-2.0-/blob/main/image/3.png)
+
+## Add Item To Page
+![Page Design](https://github.com/hass1mf/General-Visual-Inspection-Platform-2.0-/blob/main/image/3.png)
+
+## Add TCP/IP/UDP Tools
+
